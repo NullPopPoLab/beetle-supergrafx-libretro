@@ -69,10 +69,6 @@ ifneq (,$(findstring unix,$(platform)))
    LDFLAGS += -lrt
    endif
 
-   ifneq ($(findstring Linux,$(shell uname -s)),)
-     HAVE_CDROM = 1
-   endif
-
    # Raspberry Pi
    ifneq (,$(findstring rpi,$(platform)))
       FLAGS += -fomit-frame-pointer -ffast-math
