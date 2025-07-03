@@ -43,6 +43,8 @@
 
 #define SAMPLE_RATE 44100.0
 
+#define CUSTOM_VERSION "+NC41"
+
 static bool libretro_supports_option_categories = false;
 static bool geometry_changed = false;
 
@@ -1780,7 +1782,7 @@ void retro_get_system_info(struct retro_system_info *info)
 
    memset(info, 0, sizeof(*info));
    info->library_name     = MEDNAFEN_CORE_NAME;
-   info->library_version  = MEDNAFEN_CORE_VERSION GIT_VERSION;
+   info->library_version  = MEDNAFEN_CORE_VERSION GIT_VERSION CUSTOM_VERSION;
    info->need_fullpath    = true;
    info->valid_extensions = MEDNAFEN_CORE_EXTENSIONS;
    info->block_extract    = false;
