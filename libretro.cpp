@@ -858,17 +858,11 @@ static MDFN_Surface *surf;
 #include "mednafen/pce_fast/pcecd.h"
 
 #define MAX_PLAYERS 5
-#define MAX_BUTTONS 15
+#define MAX_INPUT_TURBOABLES 8
 
 struct RETRO_DEVICE_INFO {
    int type;
 
-   // Array to keep track of whether a given player's button is turbo
-   bool turbo_enable[MAX_BUTTONS];
-
-   // Array to keep track of each buttons turbo status
-   int turbo_counter[MAX_BUTTONS];
-   int turbo_toggle_down[MAX_BUTTONS];
    uint8_t data[5];
 };
 
@@ -879,8 +873,6 @@ struct RETRO_INPUT {
 
    // The number of frames between each firing of a turbo button
    int turbo_delay;
-   int turbo_toggle;
-   bool turbo_toggle_alt;
 
    // system options
    bool up_down_allowed;
@@ -1119,27 +1111,6 @@ static void check_variables(bool loaded)
       log_cb(RETRO_LOG_INFO, "PCE CD Audio settings changed.\n");
    }
 
-   var.key = "sgx_turbo_toggle";
-
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-   {
-      int oldval = r_input.turbo_toggle;
-      if (strcmp(var.value, "switch") == 0)
-         r_input.turbo_toggle = 1;
-      else if (strcmp(var.value, "dedicated") == 0)
-         r_input.turbo_toggle = 2;
-      else
-         r_input.turbo_toggle = 0;
-      if (r_input.turbo_toggle != oldval)
-      {
-         for (unsigned i = 0; i < MAX_PLAYERS; i++)
-         {
-            r_input.device[i].turbo_enable[0] = 0;
-            r_input.device[i].turbo_enable[1] = 0;
-         }
-      }
-   }
-
    var.key = "sgx_multitap";
 
    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
@@ -1177,16 +1148,6 @@ static void check_variables(bool loaded)
 
       if (aspect_ratio_mode != oldvalue)
          geometry_changed = true;
-   }
-
-   var.key = "sgx_turbo_toggle_hotkey";
-
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-   {
-      if (strcmp(var.value, "enabled") == 0)
-         r_input.turbo_toggle_alt = true;
-      else
-         r_input.turbo_toggle_alt = false;
    }
 
    var.key = "sgx_mouse_sensitivity";
@@ -1280,9 +1241,17 @@ bool retro_load_game(const struct retro_game_info *info)
       { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z, "IV" },
       { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y, "V" },
       { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X, "VI" },
-      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
       { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Select" },
       { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Run" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G1, "Turbo I" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G2, "Turbo II" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G3, "Turbo III" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G4, "Turbo IV" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G5, "Turbo V" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G6, "Turbo VI" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L0, "Turbo Select" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R0, "Turbo Run" },
+      { 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
 
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT, "D-Pad Left" },
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP, "D-Pad Up" },
@@ -1294,9 +1263,17 @@ bool retro_load_game(const struct retro_game_info *info)
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z, "IV" },
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y, "V" },
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X, "VI" },
-      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Select" },
       { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Run" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G1, "Turbo I" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G2, "Turbo II" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G3, "Turbo III" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G4, "Turbo IV" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G5, "Turbo V" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G6, "Turbo VI" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L0, "Turbo Select" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R0, "Turbo Run" },
+      { 1, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
 
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT, "D-Pad Left" },
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP, "D-Pad Up" },
@@ -1308,9 +1285,17 @@ bool retro_load_game(const struct retro_game_info *info)
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z, "IV" },
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y, "V" },
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X, "VI" },
-      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Select" },
       { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Run" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G1, "Turbo I" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G2, "Turbo II" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G3, "Turbo III" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G4, "Turbo IV" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G5, "Turbo V" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G6, "Turbo VI" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L0, "Turbo Select" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R0, "Turbo Run" },
+      { 2, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
 
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT, "D-Pad Left" },
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP, "D-Pad Up" },
@@ -1322,9 +1307,17 @@ bool retro_load_game(const struct retro_game_info *info)
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z, "IV" },
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y, "V" },
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X, "VI" },
-      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Select" },
       { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Run" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G1, "Turbo I" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G2, "Turbo II" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G3, "Turbo III" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G4, "Turbo IV" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G5, "Turbo V" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G6, "Turbo VI" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L0, "Turbo Select" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R0, "Turbo Run" },
+      { 3, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
 
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT, "D-Pad Left" },
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP, "D-Pad Up" },
@@ -1336,9 +1329,17 @@ bool retro_load_game(const struct retro_game_info *info)
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Z, "IV" },
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y, "V" },
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_X, "VI" },
-      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "Select" },
       { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START, "Run" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G1, "Turbo I" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G2, "Turbo II" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G3, "Turbo III" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G4, "Turbo IV" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G5, "Turbo V" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_G6, "Turbo VI" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L0, "Turbo Select" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R0, "Turbo Run" },
+      { 4, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_MENU, "Mode Switch" },
 
       { 0 },
    };
@@ -1447,11 +1448,6 @@ void retro_unload_game(void)
 #define JOY_VI     BIT(11)
 #define JOY_MODE   BIT(12)
 
-static unsigned turbo_map_layout[2][2] = {
-   { RETRO_DEVICE_ID_JOYPAD_X, RETRO_DEVICE_ID_JOYPAD_Y },
-   { RETRO_DEVICE_ID_JOYPAD_R3, RETRO_DEVICE_ID_JOYPAD_L3 }
-};
-
 static unsigned map[] = {
    RETRO_DEVICE_ID_JOYPAD_A, // I 
    RETRO_DEVICE_ID_JOYPAD_B, // II 
@@ -1470,84 +1466,22 @@ static unsigned map[] = {
    RETRO_DEVICE_ID_JOYPAD_R3
 };
 
-static void update_input_turbo(int port, int &input_state, int input_data)
-{
-   static int last_mode;
-   static bool changed;
-   RETRO_DEVICE_INFO *cur_device = &(r_input.device[port]);
+typedef struct TurboAssign_{
+   int target;
+   int btn;
+   int cnt[MAX_PLAYERS];
+} TurboAssign;
 
-   if (last_mode != r_input.turbo_toggle)
-   {
-      last_mode = r_input.turbo_toggle;
-      changed = true;
-   }
-
-   // We only care about JOY_I and JOY_II (bit0 and bit 1)
-   for (unsigned i = 0; i < 2; i++)
-   {
-      // Check whether a given button is turbo-enabled
-      if (cur_device->turbo_enable[i] == 1)
-      {
-         int which = 0;
-
-         if (r_input.turbo_toggle == 1)
-            which = map[i];
-         else if (r_input.turbo_toggle == 2)
-            which = turbo_map_layout[0][i];
-
-         if (input_data & BIT(which)) // retropad to pce_joypad
-         {
-            // Turbo buttons only fire when their counter is zero or 1
-            // FIXME: In some games, the buttons requires more frames held for specific action to react
-            // e.g. an Attack button can react in just 1 frame while a Jump needs to have the buttons
-            // held for 3 frames before it can be registered as a "Jump" action
-            if (cur_device->turbo_counter[i] < 2)
-               input_state |= (JOY_I + i);
-            else
-               input_state &= ~(JOY_I + i);
-            if (++cur_device->turbo_counter[i] > r_input.turbo_delay) {
-               input_state |= (JOY_I + i);
-               cur_device->turbo_counter[i] = 0;
-            }
-         }
-         else
-            cur_device->turbo_counter[i] = 0;
-      }
-   }
-
-   // switch
-   if (r_input.turbo_toggle == 1)
-   {
-      unsigned turbo_map[2] = {
-         turbo_map_layout[r_input.turbo_toggle_alt][0],
-         turbo_map_layout[r_input.turbo_toggle_alt][1]
-      };
-
-      for (int i = 0; i < 2; i++)
-      {
-         if (input_data & BIT(turbo_map[i]))
-         {
-            if (cur_device->turbo_toggle_down[i] == 0)
-            {
-               cur_device->turbo_toggle_down[i] ^= 1;
-               cur_device->turbo_enable[i] ^= 1;
-               MDFN_DispMessage("Pad %i Button %s Turbo %s", port + 1,
-                   i ? "II" : "I", cur_device->turbo_enable[i] ? "ON" : "OFF");
-            }
-         }
-         else
-            cur_device->turbo_toggle_down[i] = 0;
-      }
-   }
-
-   // dedicated turbo buttons
-   else if (r_input.turbo_toggle == 2 && changed)
-   {
-      cur_device->turbo_enable[0] = 1;
-      cur_device->turbo_enable[1] = 1;
-      changed = false;
-   }
-}
+static TurboAssign turbo[MAX_INPUT_TURBOABLES] = {
+   {0,RETRO_DEVICE_ID_JOYPAD_G1,{0}}, // I
+   {1,RETRO_DEVICE_ID_JOYPAD_G2,{0}}, // II
+   {8,RETRO_DEVICE_ID_JOYPAD_G3,{0}}, // III
+   {9,RETRO_DEVICE_ID_JOYPAD_G4,{0}}, // IV
+   {10,RETRO_DEVICE_ID_JOYPAD_G5,{0}}, // V
+   {11,RETRO_DEVICE_ID_JOYPAD_G6,{0}}, // VI
+   {2,RETRO_DEVICE_ID_JOYPAD_L0,{0}}, // SELECT
+   {3,RETRO_DEVICE_ID_JOYPAD_R0,{0}}, // RUN
+};
 
 static void update_input(void)
 {
@@ -1606,9 +1540,16 @@ static void update_input(void)
          if (ret & BIT(RETRO_DEVICE_ID_JOYPAD_MENU))
             input_state |= JOY_MODE;
 
-         // process turbo buttons only when in 2-button mode
-         if (r_input.turbo_toggle != 0 && !AVPad6Enabled[port])
-            update_input_turbo(port, input_state, ret);
+         for (int i = 0; i < MAX_INPUT_TURBOABLES; i++)
+         {
+            if(!(ret & (1<<turbo[i].btn))){
+               turbo[i].cnt[port]=0;
+               continue;
+            }
+            if(++turbo[i].cnt[port]<=r_input.turbo_delay)continue;
+            turbo[i].cnt[port]=0;
+            input_state|=1<<turbo[i].target;
+         }
 
          if (r_input.up_down_allowed == false)
          {
