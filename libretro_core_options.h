@@ -388,35 +388,6 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      "Turbo Hotkey Mode",
-      NULL,
-      "Enable turbo buttons. Hotkeys (buttons III and IV) can behave as either toggle switches or dedicated (hold to use) turbo buttons.",
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", "Toggle" },
-         { "dedicated", "Dedicated" },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      "Alternate Turbo Hotkey",
-      NULL,
-      "Assign RetroPad's L3/R3 buttons as turbo hotkeys instead of buttons III and IV. Works only in 'Toggle' mode and only as long as nothing is assigned to the L3/R3 buttons. You can avoid remapping buttons III and IV when switching to 6-button controller mode with this.",
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       "Turbo Delay",
       NULL,

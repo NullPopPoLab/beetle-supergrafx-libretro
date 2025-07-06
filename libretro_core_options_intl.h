@@ -105,12 +105,8 @@ extern "C" {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_AR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_AR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_AR NULL
-#define SGX_TURBO_TOGGLE_LABEL_AR NULL
-#define SGX_TURBO_TOGGLE_INFO_0_AR NULL
 #define OPTION_VAL_SWITCH_AR NULL
 #define OPTION_VAL_DEDICATED_AR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_AR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_AR NULL
 #define SGX_TURBO_DELAY_LABEL_AR NULL
 #define SGX_TURBO_DELAY_INFO_0_AR NULL
 #define SGX_CDIMAGECACHE_LABEL_AR NULL
@@ -478,35 +474,6 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_AR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_AR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_AR },
-         { "dedicated", OPTION_VAL_DEDICATED_AR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_AR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_AR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_AR,
       NULL,
@@ -821,12 +788,8 @@ struct retro_core_options_v2 options_ar = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_AST NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_AST NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_AST NULL
-#define SGX_TURBO_TOGGLE_LABEL_AST NULL
-#define SGX_TURBO_TOGGLE_INFO_0_AST NULL
 #define OPTION_VAL_SWITCH_AST NULL
 #define OPTION_VAL_DEDICATED_AST NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_AST NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_AST NULL
 #define SGX_TURBO_DELAY_LABEL_AST NULL
 #define SGX_TURBO_DELAY_INFO_0_AST NULL
 #define SGX_CDIMAGECACHE_LABEL_AST NULL
@@ -1194,35 +1157,6 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_AST,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_AST,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_AST },
-         { "dedicated", OPTION_VAL_DEDICATED_AST },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_AST,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_AST,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_AST,
       NULL,
@@ -1537,12 +1471,8 @@ struct retro_core_options_v2 options_ast = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_BE "Выбар 2- ці 6-ці кнопкавага кантролера па змаўчанні для парта 4. Дадзеная опцыя ўжываецца толькі пры запуску ядра. Для пераключэння на ляту выкарыстоўвайце кнопку 'Змяніць рэжым'. УВАГА: у несумяшчальных гульнях 6-кнопкавы геймпад можа выклікаць багі кіравання."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_BE "Тып джойсціка Гульца 5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_BE "Выбар 2- ці 6-ці кнопкавага кантролера па змаўчанні для парта 5. Дадзеная опцыя ўжываецца толькі пры запуску ядра. Для пераключэння на ляту выкарыстоўвайце кнопку 'Змяніць рэжым'. УВАГА: у несумяшчальных гульнях 6-кнопкавы геймпад можа выклікаць багі кіравання."
-#define SGX_TURBO_TOGGLE_LABEL_BE NULL
-#define SGX_TURBO_TOGGLE_INFO_0_BE NULL
 #define OPTION_VAL_SWITCH_BE "Пераключальнікі"
 #define OPTION_VAL_DEDICATED_BE NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_BE NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_BE NULL
 #define SGX_TURBO_DELAY_LABEL_BE NULL
 #define SGX_TURBO_DELAY_INFO_0_BE NULL
 #define SGX_CDIMAGECACHE_LABEL_BE "Кэшаваць выяву CD (патрабуецца перазапуск)"
@@ -1910,35 +1840,6 @@ struct retro_core_option_v2_definition option_defs_be[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_BE,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_BE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_BE },
-         { "dedicated", OPTION_VAL_DEDICATED_BE },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_BE,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_BE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_BE,
       NULL,
@@ -2253,12 +2154,8 @@ struct retro_core_options_v2 options_be = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_BG NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_BG NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_BG NULL
-#define SGX_TURBO_TOGGLE_LABEL_BG NULL
-#define SGX_TURBO_TOGGLE_INFO_0_BG NULL
 #define OPTION_VAL_SWITCH_BG NULL
 #define OPTION_VAL_DEDICATED_BG NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_BG NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_BG NULL
 #define SGX_TURBO_DELAY_LABEL_BG NULL
 #define SGX_TURBO_DELAY_INFO_0_BG NULL
 #define SGX_CDIMAGECACHE_LABEL_BG NULL
@@ -2626,35 +2523,6 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_BG,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_BG,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_BG },
-         { "dedicated", OPTION_VAL_DEDICATED_BG },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_BG,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_BG,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_BG,
       NULL,
@@ -2969,12 +2837,8 @@ struct retro_core_options_v2 options_bg = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_CA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_CA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_CA NULL
-#define SGX_TURBO_TOGGLE_LABEL_CA NULL
-#define SGX_TURBO_TOGGLE_INFO_0_CA NULL
 #define OPTION_VAL_SWITCH_CA NULL
 #define OPTION_VAL_DEDICATED_CA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_CA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CA NULL
 #define SGX_TURBO_DELAY_LABEL_CA NULL
 #define SGX_TURBO_DELAY_INFO_0_CA NULL
 #define SGX_CDIMAGECACHE_LABEL_CA NULL
@@ -3342,35 +3206,6 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_CA,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_CA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_CA },
-         { "dedicated", OPTION_VAL_DEDICATED_CA },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_CA,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_CA,
       NULL,
@@ -3685,12 +3520,8 @@ struct retro_core_options_v2 options_ca = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_CHS NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_CHS NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_CHS NULL
-#define SGX_TURBO_TOGGLE_LABEL_CHS NULL
-#define SGX_TURBO_TOGGLE_INFO_0_CHS NULL
 #define OPTION_VAL_SWITCH_CHS "切换"
 #define OPTION_VAL_DEDICATED_CHS NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_CHS NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CHS NULL
 #define SGX_TURBO_DELAY_LABEL_CHS NULL
 #define SGX_TURBO_DELAY_INFO_0_CHS NULL
 #define SGX_CDIMAGECACHE_LABEL_CHS "启用CD光盘缓存（重启以生效）"
@@ -4058,35 +3889,6 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_CHS,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_CHS,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_CHS },
-         { "dedicated", OPTION_VAL_DEDICATED_CHS },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_CHS,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CHS,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_CHS,
       NULL,
@@ -4401,12 +4203,8 @@ struct retro_core_options_v2 options_chs = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_CHT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_CHT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_CHT NULL
-#define SGX_TURBO_TOGGLE_LABEL_CHT "連發模式"
-#define SGX_TURBO_TOGGLE_INFO_0_CHT "設定[III/IV鍵]連發模式(開關/專用), 設定<開關>時提供給[I/II鍵]使用。"
 #define OPTION_VAL_SWITCH_CHT "開關"
 #define OPTION_VAL_DEDICATED_CHT "專用"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_CHT "備用連發按鍵"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CHT "開啟時[L3/R3鍵]作為連發的開關, 僅限「連發模式」設定為<開關>模式, 並且[L3/R3鍵]未設定按鍵時生效, 用於切換為主機的6鍵控制器。"
 #define SGX_TURBO_DELAY_LABEL_CHT "連發間隔"
 #define SGX_TURBO_DELAY_INFO_0_CHT "設定連發的間隔時間(幀數)。"
 #define SGX_CDIMAGECACHE_LABEL_CHT "映像檔快取 (需要重新啟動)"
@@ -4774,35 +4572,6 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_CHT,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_CHT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_CHT },
-         { "dedicated", OPTION_VAL_DEDICATED_CHT },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_CHT,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CHT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_CHT,
       NULL,
@@ -5117,12 +4886,8 @@ struct retro_core_options_v2 options_cht = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_CS "Zvolte, zda má mít joypad port 4 ve výchozím nastavení 2 nebo 6 tlačítek. Tato volba se použije pouze při spuštění jádra, pokud chcete přepínat za běhu obsahu, použijte tlačítko \"Přepínač režimů\". POZNÁMKA: 6tlačítkový joypad může mít v nekompatibilních hrách podivné chování."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_CS "P5 Výchozí typ joypadu"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_CS "Zvolte, zda má mít joypad port 5 ve výchozím nastavení 2 nebo 6 tlačítek. Tato volba se použije pouze při spuštění jádra, pokud chcete přepínat za běhu obsahu, použijte tlačítko \"Přepínač režimů\". POZNÁMKA: 6tlačítkový joypad může mít v nekompatibilních hrách podivné chování."
-#define SGX_TURBO_TOGGLE_LABEL_CS "Režim Turbo Hotkey"
-#define SGX_TURBO_TOGGLE_INFO_0_CS "Povolení turbo tlačítek. Klávesové zkratky (tlačítka III a IV) se mohou chovat jako přepínače nebo jako vyhrazená turbo tlačítka (pro použití je třeba je podržet)."
 #define OPTION_VAL_SWITCH_CS "Přepínač"
 #define OPTION_VAL_DEDICATED_CS "Věnováno"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_CS "Alternativní Hotkey Turbo"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CS "Přiřazení tlačítek L3/R3 zařízení RetroPad jako turbo klávesových zkratek namísto tlačítek III a IV. Funguje pouze v režimu 'Přepínač' a pouze pokud není tlačítkům L3/R3 nic přiřazeno. Pomocí této funkce se můžete vyhnout přemapování tlačítek III a IV při přepnutí do režimu šestitlačítkového ovladače."
 #define SGX_TURBO_DELAY_LABEL_CS "Zpoždění Turba"
 #define SGX_TURBO_DELAY_INFO_0_CS "Nastavení doby mezi nástupem turba (ve snímcích)."
 #define SGX_CDIMAGECACHE_LABEL_CS "Vyrovnávací paměť obrazu CD (nutný restart)"
@@ -5490,35 +5255,6 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_CS,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_CS,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_CS },
-         { "dedicated", OPTION_VAL_DEDICATED_CS },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_CS,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CS,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_CS,
       NULL,
@@ -5833,12 +5569,8 @@ struct retro_core_options_v2 options_cs = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_CY NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_CY NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_CY NULL
-#define SGX_TURBO_TOGGLE_LABEL_CY NULL
-#define SGX_TURBO_TOGGLE_INFO_0_CY NULL
 #define OPTION_VAL_SWITCH_CY NULL
 #define OPTION_VAL_DEDICATED_CY NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_CY NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CY NULL
 #define SGX_TURBO_DELAY_LABEL_CY NULL
 #define SGX_TURBO_DELAY_INFO_0_CY NULL
 #define SGX_CDIMAGECACHE_LABEL_CY NULL
@@ -6206,35 +5938,6 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_CY,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_CY,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_CY },
-         { "dedicated", OPTION_VAL_DEDICATED_CY },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_CY,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_CY,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_CY,
       NULL,
@@ -6549,12 +6252,8 @@ struct retro_core_options_v2 options_cy = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_DA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_DA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_DA NULL
-#define SGX_TURBO_TOGGLE_LABEL_DA NULL
-#define SGX_TURBO_TOGGLE_INFO_0_DA NULL
 #define OPTION_VAL_SWITCH_DA NULL
 #define OPTION_VAL_DEDICATED_DA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_DA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_DA NULL
 #define SGX_TURBO_DELAY_LABEL_DA NULL
 #define SGX_TURBO_DELAY_INFO_0_DA NULL
 #define SGX_CDIMAGECACHE_LABEL_DA NULL
@@ -6922,35 +6621,6 @@ struct retro_core_option_v2_definition option_defs_da[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_DA,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_DA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_DA },
-         { "dedicated", OPTION_VAL_DEDICATED_DA },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_DA,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_DA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_DA,
       NULL,
@@ -7265,12 +6935,8 @@ struct retro_core_options_v2 options_da = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_DE "Hier wählen, ob Joypad von Port 4 standardmäßig 2 oder 6 Tasten besitzen soll. Diese Option wird nur beim Start des Cores ausgeführt. Wenn umgeschaltet werden soll, während der Inhalt läuft, bitte den „Moduswechsel“ verwenden. HINWEIS: Ein 6-Tasten-Joypad kann sich in nicht kompatiblen Spielen seltsam verhalten."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_DE "P5 Standard-Joypad-Typ"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_DE "Hier wählen, ob Joypad von Port 5 standardmäßig 2 oder 6 Tasten besitzen soll. Diese Option wird nur beim Start des Cores ausgeführt. Wenn umgeschaltet werden soll, während der Inhalt läuft, bitte den „Moduswechsel“ verwenden. HINWEIS: Ein 6-Tasten-Joypad kann sich in nicht kompatiblen Spielen seltsam verhalten."
-#define SGX_TURBO_TOGGLE_LABEL_DE "Turbo-Hotkey-Modus"
-#define SGX_TURBO_TOGGLE_INFO_0_DE "Turbotasten aktivieren. Hotkeys (Tasten III und IV) können entweder als Umschalter oder als dedizierte Turbotasten (zum Verwenden gedrückt halten) fungieren."
 #define OPTION_VAL_SWITCH_DE "Umschalten"
 #define OPTION_VAL_DEDICATED_DE "Dediziert"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_DE "Alternative Turbo-Hotkeys"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_DE "RetroPads L3/R3-Tasten als Turbo-Hotkeys anstelle der Tasten III und IV zuweisen. Funktioniert nur im „Toggle“-Modus und nur, solange den L3/R3-Tasten nichts zugewiesen ist. Damit die Belegung der Tasten III und IV vermieden werden, wenn in den 6-Tasten-Controller-Modus gewechselt wird."
 #define SGX_TURBO_DELAY_LABEL_DE "Turbo-Verzögerung"
 #define SGX_TURBO_DELAY_INFO_0_DE "Die Zeit zwischen den Turbo-Signalen (in Frames) einstellen."
 #define SGX_CDIMAGECACHE_LABEL_DE "CD-Abbild-Cache (Neustart erforderlich)"
@@ -7638,35 +7304,6 @@ struct retro_core_option_v2_definition option_defs_de[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_DE,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_DE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_DE },
-         { "dedicated", OPTION_VAL_DEDICATED_DE },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_DE,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_DE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_DE,
       NULL,
@@ -7981,12 +7618,8 @@ struct retro_core_options_v2 options_de = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_EL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_EL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_EL NULL
-#define SGX_TURBO_TOGGLE_LABEL_EL NULL
-#define SGX_TURBO_TOGGLE_INFO_0_EL NULL
 #define OPTION_VAL_SWITCH_EL NULL
 #define OPTION_VAL_DEDICATED_EL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_EL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EL NULL
 #define SGX_TURBO_DELAY_LABEL_EL "Καθυστέρηση Τούρμπο"
 #define SGX_TURBO_DELAY_INFO_0_EL NULL
 #define SGX_CDIMAGECACHE_LABEL_EL NULL
@@ -8354,35 +7987,6 @@ struct retro_core_option_v2_definition option_defs_el[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_EL,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_EL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_EL },
-         { "dedicated", OPTION_VAL_DEDICATED_EL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_EL,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_EL,
       NULL,
@@ -8697,12 +8301,8 @@ struct retro_core_options_v2 options_el = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_EN "Choose if port 4 joypad should be 2 or 6 buttons by default. This option is only applied when the core starts, if you want to switch while content is running, use the 'Mode Switch' button. NOTE: 6 buttons joypad can have weird behaviours in non-compatible games."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_EN NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_EN "Choose if port 5 joypad should be 2 or 6 buttons by default. This option is only applied when the core starts, if you want to switch while content is running, use the 'Mode Switch' button. NOTE: 6 buttons joypad can have weird behaviours in non-compatible games."
-#define SGX_TURBO_TOGGLE_LABEL_EN NULL
-#define SGX_TURBO_TOGGLE_INFO_0_EN NULL
 #define OPTION_VAL_SWITCH_EN NULL
 #define OPTION_VAL_DEDICATED_EN NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_EN NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EN NULL
 #define SGX_TURBO_DELAY_LABEL_EN NULL
 #define SGX_TURBO_DELAY_INFO_0_EN NULL
 #define SGX_CDIMAGECACHE_LABEL_EN NULL
@@ -9070,35 +8670,6 @@ struct retro_core_option_v2_definition option_defs_en[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_EN,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_EN,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_EN },
-         { "dedicated", OPTION_VAL_DEDICATED_EN },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_EN,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EN,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_EN,
       NULL,
@@ -9413,12 +8984,8 @@ struct retro_core_options_v2 options_en = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_EO NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_EO NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_EO NULL
-#define SGX_TURBO_TOGGLE_LABEL_EO NULL
-#define SGX_TURBO_TOGGLE_INFO_0_EO NULL
 #define OPTION_VAL_SWITCH_EO NULL
 #define OPTION_VAL_DEDICATED_EO NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_EO NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EO NULL
 #define SGX_TURBO_DELAY_LABEL_EO NULL
 #define SGX_TURBO_DELAY_INFO_0_EO NULL
 #define SGX_CDIMAGECACHE_LABEL_EO NULL
@@ -9786,35 +9353,6 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_EO,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_EO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_EO },
-         { "dedicated", OPTION_VAL_DEDICATED_EO },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_EO,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_EO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_EO,
       NULL,
@@ -10129,12 +9667,8 @@ struct retro_core_options_v2 options_eo = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_ES "Indica si el mando del puerto 4 debería ser uno de 2 o 6 botones por defecto. Esta opción se aplica únicamente al iniciar el núcleo: si deseas cambiar el tipo de mando mientras se esté ejecutando un contenido, debes usar el botón de cambio de modo. NOTA: los mandos de 6 botones pueden producir comportamientos extraños en juegos que no sean compatibles con este mando."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_ES "Tipo de mando predeterminado del J5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_ES "Indica si el mando del puerto 5 debería ser uno de 2 o 6 botones por defecto. Esta opción se aplica únicamente al iniciar el núcleo: si deseas cambiar el tipo de mando mientras se esté ejecutando un contenido, debes usar el botón de cambio de modo. NOTA: los mandos de 6 botones pueden producir comportamientos extraños en juegos que no sean compatibles con este mando."
-#define SGX_TURBO_TOGGLE_LABEL_ES "Modo de las teclas rápidas del turbo"
-#define SGX_TURBO_TOGGLE_INFO_0_ES "Activa los botones con turbo. Las teclas rápidas (los botones III y IV) pueden hacer de conmutadores o de botones de turbo dedicados (mantenlos pulsados para usarlos)."
 #define OPTION_VAL_SWITCH_ES "Activación manual"
 #define OPTION_VAL_DEDICATED_ES "Botones dedicados"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_ES "Teclas rápidas alternativas para el turbo"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_ES "Asigna los botones L3/R3 del RetroPad como teclas rápidas de turbo en vez de usar los botones III y IV. Solo funciona en el modo «Alternar» y mientras no haya otra acción asignada a los botones L3/R3. Con esta opción no tendrás que reasignar los botones III y IV cuando cambies al modo de mando de 6 botones."
 #define SGX_TURBO_DELAY_LABEL_ES "Retraso del turbo"
 #define SGX_TURBO_DELAY_INFO_0_ES "Ajusta el tiempo que pasará entre cada pulsación del turbo (en fotogramas)."
 #define SGX_CDIMAGECACHE_LABEL_ES "Cachear imagen de CD (es necesario reiniciar)"
@@ -10502,35 +10036,6 @@ struct retro_core_option_v2_definition option_defs_es[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_ES,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_ES,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_ES },
-         { "dedicated", OPTION_VAL_DEDICATED_ES },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_ES,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_ES,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_ES,
       NULL,
@@ -10845,12 +10350,8 @@ struct retro_core_options_v2 options_es = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_FA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_FA NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_FA NULL
-#define SGX_TURBO_TOGGLE_LABEL_FA NULL
-#define SGX_TURBO_TOGGLE_INFO_0_FA NULL
 #define OPTION_VAL_SWITCH_FA NULL
 #define OPTION_VAL_DEDICATED_FA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_FA NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FA NULL
 #define SGX_TURBO_DELAY_LABEL_FA NULL
 #define SGX_TURBO_DELAY_INFO_0_FA NULL
 #define SGX_CDIMAGECACHE_LABEL_FA NULL
@@ -11218,35 +10719,6 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_FA,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_FA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_FA },
-         { "dedicated", OPTION_VAL_DEDICATED_FA },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_FA,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_FA,
       NULL,
@@ -11561,12 +11033,8 @@ struct retro_core_options_v2 options_fa = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_FI NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_FI NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_FI NULL
-#define SGX_TURBO_TOGGLE_LABEL_FI NULL
-#define SGX_TURBO_TOGGLE_INFO_0_FI NULL
 #define OPTION_VAL_SWITCH_FI NULL
 #define OPTION_VAL_DEDICATED_FI NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_FI "Vaihtoehtoinen turbo-pikanäppäin"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FI NULL
 #define SGX_TURBO_DELAY_LABEL_FI "Turbon viive"
 #define SGX_TURBO_DELAY_INFO_0_FI "Säädä turbo-tulituksen välistä aikaa (kuvissa)."
 #define SGX_CDIMAGECACHE_LABEL_FI "CD-levykuvan välimuisti (Uudelleenkäynnistys vaaditaan)"
@@ -11934,35 +11402,6 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_FI,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_FI,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_FI },
-         { "dedicated", OPTION_VAL_DEDICATED_FI },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_FI,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FI,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_FI,
       NULL,
@@ -12277,12 +11716,8 @@ struct retro_core_options_v2 options_fi = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_FR "Choisissez si la manette du port 4 doit avoir 2 ou 6 touches par défaut. Cette option n'est appliquée qu'au démarrage du cœur, si vous voulez changer de contenu lorsque du contenu est en cours d'exécution, utilisez la touche 'Mode Switch'. REMARQUE : Les manettes à 6 touches peuvent avoir des comportements bizarres dans des jeux non compatibles."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_FR "Type de manette par défaut pour le joueur 5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_FR "Choisissez si la manette du port 5 doit avoir 2 ou 6 touches par défaut. Cette option n'est appliquée qu'au démarrage du cœur, si vous voulez changer de contenu lorsque du contenu est en cours d'exécution, utilisez la touche 'Mode Switch'. REMARQUE : Les manettes à 6 touches peuvent avoir des comportements bizarres dans des jeux non compatibles."
-#define SGX_TURBO_TOGGLE_LABEL_FR "Mode des touches de raccourci du turbo"
-#define SGX_TURBO_TOGGLE_INFO_0_FR "Activer les touches turbo. Les raccourcis (touches III et IV) peuvent se comporter comme des interrupteurs ou des touches turbo dédiées (maintenir enfoncées)."
 #define OPTION_VAL_SWITCH_FR "Activer/désactiver"
 #define OPTION_VAL_DEDICATED_FR "Dédiées"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_FR "Touches de raccourci turbo alternatives"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FR "Affecter les touches L3/R3 de la RetroManette comme raccourcis turbo au lieu des touches III et IV. Fonctionne uniquement en mode 'Activer/désactiver' et seulement tant que rien n'est assigné aux touches L3/R3. Vous pouvez éviter de remapper les touches III et IV lorsque vous passez en mode manette à 6 boutons avec cette option."
 #define SGX_TURBO_DELAY_LABEL_FR "Délai du turbo"
 #define SGX_TURBO_DELAY_INFO_0_FR "Ajuster le temps entre les tirs turbo (en images)."
 #define SGX_CDIMAGECACHE_LABEL_FR "Mise en cache des images CD (Redémarrage requis)"
@@ -12650,35 +12085,6 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_FR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_FR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_FR },
-         { "dedicated", OPTION_VAL_DEDICATED_FR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_FR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_FR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_FR,
       NULL,
@@ -12993,12 +12399,8 @@ struct retro_core_options_v2 options_fr = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_GL "Escolla se o mando do porto 4 debe ter 2 ou 6 botóns por defecto. Esta opción só se aplica cando se inicia o núcleo, se queres cambiar mentres o contido está en execución, usa o botón \"Cambio de modo\". NOTA: O mando de 6 botóns pode ter comportamentos estraños en xogos non compatibles."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_GL "P5 Tipo de Joypad predeterminado"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_GL "Escolla se o mando do porto 5 debe ter 2 ou 6 botóns por defecto. Esta opción só se aplica cando se inicia o núcleo, se queres cambiar mentres o contido está en execución, usa o botón \"Cambio de modo\". NOTA: O mando de 6 botóns pode ter comportamentos estraños en xogos non compatibles."
-#define SGX_TURBO_TOGGLE_LABEL_GL "Modo de teclas rápidas Turbo"
-#define SGX_TURBO_TOGGLE_INFO_0_GL "Activa os botóns turbo. As teclas de acceso rápido (botóns III e IV) poden comportarse como interruptores de conmutación ou como botóns turbo dedicados (manteña para usar)."
 #define OPTION_VAL_SWITCH_GL "Alternar"
 #define OPTION_VAL_DEDICATED_GL "Dedicado"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_GL "Tecla de acceso rápido Turbo alternativa"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_GL "Asigne os botóns L3/R3 de RetroPad como teclas de acceso rápido turbo en lugar dos botóns III e IV. Funciona só no modo \"Alterar\" e só sempre que non teña nada asignado aos botóns L3/R3. Con isto, pode evitar reasignar os botóns III e IV ao cambiar ao modo de controlador de 6 botóns."
 #define SGX_TURBO_DELAY_LABEL_GL "Retardo Turbo"
 #define SGX_TURBO_DELAY_INFO_0_GL "Axuste o tempo entre o lume do turbo (en fotogramas)."
 #define SGX_CDIMAGECACHE_LABEL_GL "Caché de imaxes de CD (necesario reiniciar)"
@@ -13366,35 +12768,6 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_GL,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_GL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_GL },
-         { "dedicated", OPTION_VAL_DEDICATED_GL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_GL,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_GL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_GL,
       NULL,
@@ -13709,12 +13082,8 @@ struct retro_core_options_v2 options_gl = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_HE NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_HE NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_HE NULL
-#define SGX_TURBO_TOGGLE_LABEL_HE NULL
-#define SGX_TURBO_TOGGLE_INFO_0_HE NULL
 #define OPTION_VAL_SWITCH_HE NULL
 #define OPTION_VAL_DEDICATED_HE NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_HE NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HE NULL
 #define SGX_TURBO_DELAY_LABEL_HE NULL
 #define SGX_TURBO_DELAY_INFO_0_HE NULL
 #define SGX_CDIMAGECACHE_LABEL_HE NULL
@@ -14082,35 +13451,6 @@ struct retro_core_option_v2_definition option_defs_he[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_HE,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_HE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_HE },
-         { "dedicated", OPTION_VAL_DEDICATED_HE },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_HE,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HE,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_HE,
       NULL,
@@ -14425,12 +13765,8 @@ struct retro_core_options_v2 options_he = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_HR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_HR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_HR NULL
-#define SGX_TURBO_TOGGLE_LABEL_HR NULL
-#define SGX_TURBO_TOGGLE_INFO_0_HR NULL
 #define OPTION_VAL_SWITCH_HR NULL
 #define OPTION_VAL_DEDICATED_HR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_HR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HR NULL
 #define SGX_TURBO_DELAY_LABEL_HR NULL
 #define SGX_TURBO_DELAY_INFO_0_HR NULL
 #define SGX_CDIMAGECACHE_LABEL_HR NULL
@@ -14798,35 +14134,6 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_HR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_HR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_HR },
-         { "dedicated", OPTION_VAL_DEDICATED_HR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_HR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_HR,
       NULL,
@@ -15141,12 +14448,8 @@ struct retro_core_options_v2 options_hr = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_HU "A 4. csatlakozó induláskor 2 vagy 6 gombos-e. Ez a beállítás csak a mag elindításakor jut érvényre, tartalom futtatása közben a \"Módváltás\" gomb használható. Figyelem: a 6 gombos joypadnak furcsa hatása lehet az azzal nem kompatibilis játékokra."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_HU "5. joypad alapértelmezett típusa"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_HU "Az 5. csatlakozó induláskor 2 vagy 6 gombos-e. Ez a beállítás csak a mag elindításakor jut érvényre, tartalom futtatása közben a \"Módváltás\" gomb használható. Figyelem: a 6 gombos joypadnak furcsa hatása lehet az azzal nem kompatibilis játékokra."
-#define SGX_TURBO_TOGGLE_LABEL_HU "Turbó gyorsgomb mód"
-#define SGX_TURBO_TOGGLE_INFO_0_HU "Turbó gombok engedélyezése. A gyorsgombok (III és IV) váltógombként vagy kijelölt (nyomva tartással használható) turbó gombként működhetnek."
 #define OPTION_VAL_SWITCH_HU "Váltógomb"
 #define OPTION_VAL_DEDICATED_HU "Kijelölt"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_HU "Alternatív Turbo gyorsgomb"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HU "A III és IV gomb helyett a RetroPad L3/R3 gombjait rendeli a turbo átkapcsoláshoz. Csak Váltógomb módban, és akkor működik, ha nincs semmi az L3/R3 gombhoz rendelve. Ezzel elkerülhető a III és IV gomb átirányítása a 6-gombos kontroller módba kapcsoláskor."
 #define SGX_TURBO_DELAY_LABEL_HU "Turbo késleltetés"
 #define SGX_TURBO_DELAY_INFO_0_HU "A turbo tűz ismétlései közti idő (képkockákban)."
 #define SGX_CDIMAGECACHE_LABEL_HU "Gyorsítótár a CD képfájlhoz (újraindítás szükséges)"
@@ -15514,35 +14817,6 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_HU,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_HU,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_HU },
-         { "dedicated", OPTION_VAL_DEDICATED_HU },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_HU,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_HU,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_HU,
       NULL,
@@ -15857,12 +15131,8 @@ struct retro_core_options_v2 options_hu = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_ID NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_ID NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_ID NULL
-#define SGX_TURBO_TOGGLE_LABEL_ID NULL
-#define SGX_TURBO_TOGGLE_INFO_0_ID NULL
 #define OPTION_VAL_SWITCH_ID NULL
 #define OPTION_VAL_DEDICATED_ID NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_ID NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_ID NULL
 #define SGX_TURBO_DELAY_LABEL_ID "Tundaan Bertubi"
 #define SGX_TURBO_DELAY_INFO_0_ID "Menyesuaikan waktu antara tekan bertubi (berjumlah bingkai)."
 #define SGX_CDIMAGECACHE_LABEL_ID "Tembolok Citra CD (Perlu Mulai Ulang)"
@@ -16230,35 +15500,6 @@ struct retro_core_option_v2_definition option_defs_id[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_ID,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_ID,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_ID },
-         { "dedicated", OPTION_VAL_DEDICATED_ID },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_ID,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_ID,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_ID,
       NULL,
@@ -16573,12 +15814,8 @@ struct retro_core_options_v2 options_id = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_IT "Scegli se la porta 4 joypad dovrebbe essere 2 o 6 pulsanti per impostazione predefinita. Questa opzione viene applicata solo quando il core si avvia, se si desidera passare mentre il contenuto è in esecuzione, utilizzare il pulsante 'Commutatore di modalità'. NOTA: 6 pulsanti joypad possono avere comportamenti strani in giochi non compatibili."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_IT "Tipo Joypad Predefinito P5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_IT "Scegli se la porta 5 joypad dovrebbe essere 2 o 6 pulsanti per impostazione predefinita. Questa opzione viene applicata solo quando il core si avvia, se si desidera passare mentre il contenuto è in esecuzione, utilizzare il pulsante 'Commutatore di modalità'. NOTA: 6 pulsanti joypad possono avere comportamenti strani in giochi non compatibili."
-#define SGX_TURBO_TOGGLE_LABEL_IT "Modalità Scorciatoia Turbo"
-#define SGX_TURBO_TOGGLE_INFO_0_IT "Abilita i pulsanti turbo. I tasti di scelta rapida (pulsanti III e IV) possono comportarsi come interruttori o pulsanti turbo dedicati (tenere premuto per usare)."
 #define OPTION_VAL_SWITCH_IT "Interrutore"
 #define OPTION_VAL_DEDICATED_IT "Dedicato"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_IT "Scorciatoia Turbo Alternativa"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_IT "Assegnare i pulsanti RetroPad's L3/R3 come tasti di scelta rapida turbo invece dei pulsanti III e IV. Funziona solo in modalità 'Interruttore' e solo finché non viene assegnato nulla ai pulsanti L3/R3. È possibile evitare di remapping i pulsanti III e IV quando si passa alla modalità controller a 6 pulsanti con questo."
 #define SGX_TURBO_DELAY_LABEL_IT "Ritardo Turbo"
 #define SGX_TURBO_DELAY_INFO_0_IT "Regolare il tempo tra gli input del turbo (in fotogrammi)."
 #define SGX_CDIMAGECACHE_LABEL_IT "Cache Immagine Cd (Riavvio Richiesto)"
@@ -16946,35 +16183,6 @@ struct retro_core_option_v2_definition option_defs_it[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_IT,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_IT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_IT },
-         { "dedicated", OPTION_VAL_DEDICATED_IT },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_IT,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_IT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_IT,
       NULL,
@@ -17289,12 +16497,8 @@ struct retro_core_options_v2 options_it = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_JA "ポート 4 のジョイパッドをデフォルトで 2 または 6 ボタンにするかどうかを選択します。このオプションはコアの開始時にのみ適用されます。コンテンツの実行中に切り替えたい場合は、[モード切り替え] ボタンを使用してください。注意: 6 ボタンジョイパッドは互換性のないゲームで奇妙な動作をすることがあります。"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_JA "P5 デフォルトジョイパッドの種類"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_JA "ポート 5 のジョイパッドをデフォルトで 2 または 6 ボタンにするかどうかを選択します。このオプションはコアの開始時にのみ適用されます。コンテンツの実行中に切り替えたい場合は、[モード切り替え] ボタンを使用してください。注意: 6 ボタンジョイパッドは互換性のないゲームで奇妙な動作をすることがあります。"
-#define SGX_TURBO_TOGGLE_LABEL_JA "ターボホットキーモード"
-#define SGX_TURBO_TOGGLE_INFO_0_JA "ターボボタンを有効にします。ホットキー (ボタン III と IV) は、通常レトロパッドの A/B ボタンに割り当てられる ボタン I および ボタン II のターボのオン/オフ、またはボタン I/II の専用ターボボタンとして動作します。"
 #define OPTION_VAL_SWITCH_JA "切り替え"
 #define OPTION_VAL_DEDICATED_JA "専用"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_JA "代替ターボホットキー"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_JA "ボタン III と IV ではなく、レトロパッドの L3/R3 ボタンにターボホットキーを割り当てます。 [切り替え] モードかつ、L3/R3 に何も割り当てられていない場合にのみ動作します。これにより、6 ボタンコントローラーモードに切り替えた際、ボタン II および IV へのリマップを回避することができます。"
 #define SGX_TURBO_DELAY_LABEL_JA "ターボ遅延"
 #define SGX_TURBO_DELAY_INFO_0_JA "連射間隔の時間を調整します (フレーム単位)。"
 #define SGX_CDIMAGECACHE_LABEL_JA "CD イメージキャッシュ (再起動が必要)"
@@ -17662,35 +16866,6 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_JA,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_JA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_JA },
-         { "dedicated", OPTION_VAL_DEDICATED_JA },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_JA,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_JA,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_JA,
       NULL,
@@ -18005,12 +17180,8 @@ struct retro_core_options_v2 options_ja = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_KO "포트 4 조이패드를 기본적으로 2개 또는 6개 버튼으로 할지 선택합니다. 이 옵션은 코어가 시작될 때만 적용되며, 콘텐츠가 실행 중일 때 전환하려면 '모드 전환' 버튼을 사용하세요. 참고: 6버튼 조이패드는 호환되지 않는 게임에서 이상한 동작을 일으킬 수 있습니다."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_KO "P5 기본 조이패드 유형"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_KO "포트 5 조이패드를 기본적으로 2개 또는 6개 버튼으로 할지 선택합니다. 이 옵션은 코어가 시작될 때만 적용되며, 콘텐츠가 실행 중일 때 전환하려면 '모드 전환' 버튼을 사용하세요. 참고: 6버튼 조이패드는 호환되지 않는 게임에서 이상한 동작을 일으킬 수 있습니다."
-#define SGX_TURBO_TOGGLE_LABEL_KO "터포 핫키 모드"
-#define SGX_TURBO_TOGGLE_INFO_0_KO "터보 버튼을 활성화합니다. 핫키(버튼 III 및 IV)는 토글 스위치 또는 전용(길게 눌러 사용) 터보 버튼으로 작동할 수 있습니다."
 #define OPTION_VAL_SWITCH_KO "토글"
 #define OPTION_VAL_DEDICATED_KO "전용"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_KO "대체 터보 핫키"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_KO "레트로 패드의 L3/R3 버튼을 버튼 III 및 IV 대신 터보 핫키로 할당합니다. '토글' 모드에서 L3/R3 버튼에 아무 것도 할당되지 않은 경우에만 작동합니다. 이를 통해 6버튼 컨트롤러 모드로 전환할 때 버튼 III 및 IV를 다시 설정해야하는 것을 방지할 수 있습니다."
 #define SGX_TURBO_DELAY_LABEL_KO "터보 지연"
 #define SGX_TURBO_DELAY_INFO_0_KO "터보 사이의 시간을 조정합니다 (프레임 단위)."
 #define SGX_CDIMAGECACHE_LABEL_KO "CD 이미지 캐시 (재시작 필요)"
@@ -18378,35 +17549,6 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_KO,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_KO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_KO },
-         { "dedicated", OPTION_VAL_DEDICATED_KO },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_KO,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_KO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_KO,
       NULL,
@@ -18721,12 +17863,8 @@ struct retro_core_options_v2 options_ko = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_NL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_NL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_NL NULL
-#define SGX_TURBO_TOGGLE_LABEL_NL NULL
-#define SGX_TURBO_TOGGLE_INFO_0_NL NULL
 #define OPTION_VAL_SWITCH_NL NULL
 #define OPTION_VAL_DEDICATED_NL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_NL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_NL NULL
 #define SGX_TURBO_DELAY_LABEL_NL NULL
 #define SGX_TURBO_DELAY_INFO_0_NL NULL
 #define SGX_CDIMAGECACHE_LABEL_NL NULL
@@ -19094,35 +18232,6 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_NL,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_NL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_NL },
-         { "dedicated", OPTION_VAL_DEDICATED_NL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_NL,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_NL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_NL,
       NULL,
@@ -19437,12 +18546,8 @@ struct retro_core_options_v2 options_nl = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_NO NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_NO NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_NO NULL
-#define SGX_TURBO_TOGGLE_LABEL_NO NULL
-#define SGX_TURBO_TOGGLE_INFO_0_NO NULL
 #define OPTION_VAL_SWITCH_NO NULL
 #define OPTION_VAL_DEDICATED_NO NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_NO NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_NO NULL
 #define SGX_TURBO_DELAY_LABEL_NO NULL
 #define SGX_TURBO_DELAY_INFO_0_NO NULL
 #define SGX_CDIMAGECACHE_LABEL_NO NULL
@@ -19810,35 +18915,6 @@ struct retro_core_option_v2_definition option_defs_no[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_NO,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_NO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_NO },
-         { "dedicated", OPTION_VAL_DEDICATED_NO },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_NO,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_NO,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_NO,
       NULL,
@@ -20153,12 +19229,8 @@ struct retro_core_options_v2 options_no = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_OR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_OR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_OR NULL
-#define SGX_TURBO_TOGGLE_LABEL_OR NULL
-#define SGX_TURBO_TOGGLE_INFO_0_OR NULL
 #define OPTION_VAL_SWITCH_OR NULL
 #define OPTION_VAL_DEDICATED_OR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_OR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_OR NULL
 #define SGX_TURBO_DELAY_LABEL_OR NULL
 #define SGX_TURBO_DELAY_INFO_0_OR NULL
 #define SGX_CDIMAGECACHE_LABEL_OR NULL
@@ -20526,35 +19598,6 @@ struct retro_core_option_v2_definition option_defs_or[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_OR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_OR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_OR },
-         { "dedicated", OPTION_VAL_DEDICATED_OR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_OR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_OR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_OR,
       NULL,
@@ -20869,12 +19912,8 @@ struct retro_core_options_v2 options_or = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_PL "Wybierz, czy port 4 powinien mieć domyślnie 2 lub 6 przycisków. Ta opcja jest stosowana tylko przy starcie rdzenia, jeśli chcesz przełączyć się podczas włączania zawartości, użyj przycisku \"Przełącznik\". UWAGA: 6 przycisków joypad może mieć dziwne zachowanie w niekompatybilnych grach."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_PL "Domyślny typ Joypad P5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_PL "Wybierz, jeśli port 5 powinien mieć domyślnie 2 lub 6 przycisków. Ta opcja jest stosowana tylko przy starcie rdzenia, jeśli chcesz przełączyć się podczas włączania zawartości, użyj przycisku \"Przełącznik\". UWAGA: 6 przycisków joypad może mieć dziwne zachowanie w niekompatybilnych grach."
-#define SGX_TURBO_TOGGLE_LABEL_PL NULL
-#define SGX_TURBO_TOGGLE_INFO_0_PL NULL
 #define OPTION_VAL_SWITCH_PL "Przełącz"
 #define OPTION_VAL_DEDICATED_PL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_PL "Alternatywny skrót Turbo"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PL NULL
 #define SGX_TURBO_DELAY_LABEL_PL "Opóźnienie Turbo"
 #define SGX_TURBO_DELAY_INFO_0_PL NULL
 #define SGX_CDIMAGECACHE_LABEL_PL NULL
@@ -21242,35 +20281,6 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_PL,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_PL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_PL },
-         { "dedicated", OPTION_VAL_DEDICATED_PL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_PL,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_PL,
       NULL,
@@ -21585,12 +20595,8 @@ struct retro_core_options_v2 options_pl = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_PT_BR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_PT_BR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_PT_BR NULL
-#define SGX_TURBO_TOGGLE_LABEL_PT_BR "Modo de atalho do turbo"
-#define SGX_TURBO_TOGGLE_INFO_0_PT_BR "Habilita os botões turbo. Os atalhos (botões III e IV) podem comportar-se como interruptores ou como botões dedicados (segure para usar)."
 #define OPTION_VAL_SWITCH_PT_BR "Interruptor"
 #define OPTION_VAL_DEDICATED_PT_BR "Dedicado"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_PT_BR "Atalho alternativo do turbo"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PT_BR "Atribui os botões L3 e R3 do RetroPad como atalhos do turbo, em vez dos botões III e IV. Somente funciona no modo interruptor e enquanto não tiver outras atribuições aos botões L3 e R3. Você pode evitar o remapeamento dos botões III e IV ao alterar para o modo de controle de 6 botões com isso."
 #define SGX_TURBO_DELAY_LABEL_PT_BR "Atraso do turbo"
 #define SGX_TURBO_DELAY_INFO_0_PT_BR "Ajusta o intervalo entre as ativações do turbo (em quadros)."
 #define SGX_CDIMAGECACHE_LABEL_PT_BR "Cache de imagens do CD (requer reinício)"
@@ -21958,35 +20964,6 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_PT_BR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_PT_BR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_PT_BR },
-         { "dedicated", OPTION_VAL_DEDICATED_PT_BR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_PT_BR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PT_BR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_PT_BR,
       NULL,
@@ -22301,12 +21278,8 @@ struct retro_core_options_v2 options_pt_br = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_PT_PT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_PT_PT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_PT_PT NULL
-#define SGX_TURBO_TOGGLE_LABEL_PT_PT NULL
-#define SGX_TURBO_TOGGLE_INFO_0_PT_PT NULL
 #define OPTION_VAL_SWITCH_PT_PT NULL
 #define OPTION_VAL_DEDICATED_PT_PT NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_PT_PT NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PT_PT NULL
 #define SGX_TURBO_DELAY_LABEL_PT_PT NULL
 #define SGX_TURBO_DELAY_INFO_0_PT_PT NULL
 #define SGX_CDIMAGECACHE_LABEL_PT_PT "Cache da Imagem do CD (Reinicialização necessária)"
@@ -22674,35 +21647,6 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_PT_PT,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_PT_PT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_PT_PT },
-         { "dedicated", OPTION_VAL_DEDICATED_PT_PT },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_PT_PT,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_PT_PT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_PT_PT,
       NULL,
@@ -23017,12 +21961,8 @@ struct retro_core_options_v2 options_pt_pt = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_RU "Выбор 2- или 6-ти кнопочного контроллера по умолчанию для порта 4. Данная опция применяется только при запуске ядра. Для переключения на лету используйте кнопку 'Сменить режим'. ВНИМАНИЕ: в несовместимых играх 6-кнопочный геймпад может вызывать баги управления."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_RU "Тип джойстика Игрока 5"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_RU "Выбор 2- или 6-ти кнопочного контроллера по умолчанию для порта 5. Данная опция применяется только при запуске ядра. Для переключения на лету используйте кнопку 'Сменить режим'. ВНИМАНИЕ: в несовместимых играх 6-кнопочный геймпад может вызывать баги управления."
-#define SGX_TURBO_TOGGLE_LABEL_RU "Режим турбо-кнопок"
-#define SGX_TURBO_TOGGLE_INFO_0_RU "Включает турбо-кнопки. Активаторы (кнопки III и IV) могут работать как переключатели или как выделенные турбо-кнопки, срабатывающие при удержании."
 #define OPTION_VAL_SWITCH_RU "Переключатели"
 #define OPTION_VAL_DEDICATED_RU "Выделенные"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_RU "Альтернативное включение турбо"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_RU "Привязка кнопок RetroPad L3/R3 в качестве активаторов турбо вместо кнопок III и IV. Работает только в режиме 'Переключатели' и только если кнопки L3/R3 не используются для иных действий. Позволяет избежать повторной привязки кнопок III и IV при переводе контроллера в 6-кнопочный режим."
 #define SGX_TURBO_DELAY_LABEL_RU "Задержка турбо"
 #define SGX_TURBO_DELAY_INFO_0_RU "Установка интервала между повторами нажатий (в кадрах)."
 #define SGX_CDIMAGECACHE_LABEL_RU "Кэшировать образ CD (требуется перезапуск)"
@@ -23390,35 +22330,6 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_RU,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_RU,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_RU },
-         { "dedicated", OPTION_VAL_DEDICATED_RU },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_RU,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_RU,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_RU,
       NULL,
@@ -23733,12 +22644,8 @@ struct retro_core_options_v2 options_ru = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_SK NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_SK NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_SK NULL
-#define SGX_TURBO_TOGGLE_LABEL_SK NULL
-#define SGX_TURBO_TOGGLE_INFO_0_SK NULL
 #define OPTION_VAL_SWITCH_SK "Prepnúť"
 #define OPTION_VAL_DEDICATED_SK "Vyhradené"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_SK NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SK NULL
 #define SGX_TURBO_DELAY_LABEL_SK "Trvanie Turbo"
 #define SGX_TURBO_DELAY_INFO_0_SK NULL
 #define SGX_CDIMAGECACHE_LABEL_SK NULL
@@ -24106,35 +23013,6 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_SK,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_SK,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_SK },
-         { "dedicated", OPTION_VAL_DEDICATED_SK },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_SK,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SK,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_SK,
       NULL,
@@ -24449,12 +23327,8 @@ struct retro_core_options_v2 options_sk = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_SR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_SR NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_SR NULL
-#define SGX_TURBO_TOGGLE_LABEL_SR NULL
-#define SGX_TURBO_TOGGLE_INFO_0_SR NULL
 #define OPTION_VAL_SWITCH_SR NULL
 #define OPTION_VAL_DEDICATED_SR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_SR NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SR NULL
 #define SGX_TURBO_DELAY_LABEL_SR NULL
 #define SGX_TURBO_DELAY_INFO_0_SR NULL
 #define SGX_CDIMAGECACHE_LABEL_SR NULL
@@ -24822,35 +23696,6 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_SR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_SR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_SR },
-         { "dedicated", OPTION_VAL_DEDICATED_SR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_SR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_SR,
       NULL,
@@ -25165,12 +24010,8 @@ struct retro_core_options_v2 options_sr = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_SV "Välj detta ifall port 4-joypaden ska vara 2-knappars eller 6-knappars som standard. Denna inställning tillämpas endast när kärnan startar. Om du vill byta under tiden innehållet körs, använd \"Lägesväxlings\"-knappen. OBS!: 6-knappars joypaden kan visa konstigt beteende i inkompatibla spel."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_SV "Standard joypad-typ för spelare 5 (P5)"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_SV "Välj detta ifall port 5-joypaden ska vara 2-knappars eller 6-knappars som standard. Denna inställning tillämpas endast när kärnan startar. Om du vill byta under tiden innehållet körs, använd \"Lägesväxlings\"-knappen. OBS!: 6-knappars joypaden kan visa konstigt beteende i inkompatibla spel."
-#define SGX_TURBO_TOGGLE_LABEL_SV "Turbo snabbtangent-läge"
-#define SGX_TURBO_TOGGLE_INFO_0_SV "Aktivera turboknappar. Snabbtangenter (knapparna III och IV) kan bete sig som antingen växla eller dedikerade (håll för att använda) turboknappar."
 #define OPTION_VAL_SWITCH_SV "Växla"
 #define OPTION_VAL_DEDICATED_SV "Dedikerad"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_SV "Alternativ snabbtangent för turbo"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SV "Tilldela RetroPads L3/R3-knappar som snabbtangenter för turbo-läge istället för knappar III och IV. Fungerar endast i \"Växel\"-läget och endast så länge inget är tilldelat L3/R3-knapparna. Du kan undvika omkartläggning av knappar III och IV när du växlar till 6-knapps kontrollläge med detta."
 #define SGX_TURBO_DELAY_LABEL_SV "Turbofördröjning"
 #define SGX_TURBO_DELAY_INFO_0_SV "Justera tiden mellan turboeld (i bildrutor)."
 #define SGX_CDIMAGECACHE_LABEL_SV "Skivavbildningscache (omstart krävs)"
@@ -25538,35 +24379,6 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_SV,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_SV,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_SV },
-         { "dedicated", OPTION_VAL_DEDICATED_SV },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_SV,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_SV,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_SV,
       NULL,
@@ -25881,12 +24693,8 @@ struct retro_core_options_v2 options_sv = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_TR "Port 4 joypad varsayılan olarak 2 veya 6 düğme olması gerekip gerekmediğini seçin. Bu seçenek yalnızca çekirdek başladığında uygulanır, içerik çalışırken geçiş yapmak istiyorsanız, 'Mod Değiştir' düğmesini kullanın. NOT: 6 düğmeli joypad, uyumlu olmayan oyunlarda garip davranışlara sahip olabilir."
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_TR "P5 Varsayılan Joypad Tipi"
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_TR "Port 5 joypad varsayılan olarak 2 veya 6 düğme olması gerekip gerekmediğini seçin. Bu seçenek yalnızca çekirdek başladığında uygulanır, içerik çalışırken geçiş yapmak istiyorsanız, 'Mod Değiştir' düğmesini kullanın. NOT: 6 düğmeli joypad, uyumlu olmayan oyunlarda garip davranışlara sahip olabilir."
-#define SGX_TURBO_TOGGLE_LABEL_TR "Turbo Kısayol Tuşu Kipi"
-#define SGX_TURBO_TOGGLE_INFO_0_TR "Turbo düğmelerini etkinleştirin. Kısayol tuşları (düğmeler III ve IV), geçiş anahtarı veya özel (kullanmak için basılı tutun) turbo düğmeleri gibi davranabilir."
 #define OPTION_VAL_SWITCH_TR "Değiştir"
 #define OPTION_VAL_DEDICATED_TR "Atanmış"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_TR "Alternatif Turbo Kısayol Tuşu"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_TR "RetroPad L3/R3 düğmelerini III ve IV düğmeleri yerine turbo kısayol tuşları olarak atayın. Yalnızca 'Geçiş' kipinde ve L3/R3 düğmelerine hiçbir şey atanmadığı sürece çalışır. Bununla 6 düğmeli denetleyici kipine geçerken III ve IV düğmelerinin yeniden eşlenmesini önleyebilirsiniz."
 #define SGX_TURBO_DELAY_LABEL_TR "Turbo Gecikmesi"
 #define SGX_TURBO_DELAY_INFO_0_TR "Turbo sinyallerinin zamanlamasını ayarla. (Kare başına)."
 #define SGX_CDIMAGECACHE_LABEL_TR "CD Kalıbı Önbelleği (Yeniden Başlatılmalı)"
@@ -26254,35 +25062,6 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_TR,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_TR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_TR },
-         { "dedicated", OPTION_VAL_DEDICATED_TR },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_TR,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_TR,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_TR,
       NULL,
@@ -26597,12 +25376,8 @@ struct retro_core_options_v2 options_tr = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_TT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_TT NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_TT NULL
-#define SGX_TURBO_TOGGLE_LABEL_TT NULL
-#define SGX_TURBO_TOGGLE_INFO_0_TT NULL
 #define OPTION_VAL_SWITCH_TT NULL
 #define OPTION_VAL_DEDICATED_TT NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_TT NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_TT NULL
 #define SGX_TURBO_DELAY_LABEL_TT NULL
 #define SGX_TURBO_DELAY_INFO_0_TT NULL
 #define SGX_CDIMAGECACHE_LABEL_TT NULL
@@ -26970,35 +25745,6 @@ struct retro_core_option_v2_definition option_defs_tt[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_TT,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_TT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_TT },
-         { "dedicated", OPTION_VAL_DEDICATED_TT },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_TT,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_TT,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_TT,
       NULL,
@@ -27313,12 +26059,8 @@ struct retro_core_options_v2 options_tt = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_UK NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_UK NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_UK NULL
-#define SGX_TURBO_TOGGLE_LABEL_UK "Турборежим гарячих клавіш"
-#define SGX_TURBO_TOGGLE_INFO_0_UK "Увімкнути турбокнопки. Гарячі клавіші (кнопки III та IV) можуть поводити себе як перемикачі або виділені (утримування) турбокнопки."
 #define OPTION_VAL_SWITCH_UK "Перемикач"
 #define OPTION_VAL_DEDICATED_UK "Виділений"
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_UK "Альтернативні турбокнопки"
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_UK NULL
 #define SGX_TURBO_DELAY_LABEL_UK NULL
 #define SGX_TURBO_DELAY_INFO_0_UK NULL
 #define SGX_CDIMAGECACHE_LABEL_UK "Кеш образу CD (потрібен перезапуск)"
@@ -27686,35 +26428,6 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_UK,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_UK,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_UK },
-         { "dedicated", OPTION_VAL_DEDICATED_UK },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_UK,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_UK,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_UK,
       NULL,
@@ -28029,12 +26742,8 @@ struct retro_core_options_v2 options_uk = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_VAL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_VAL NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_VAL NULL
-#define SGX_TURBO_TOGGLE_LABEL_VAL NULL
-#define SGX_TURBO_TOGGLE_INFO_0_VAL NULL
 #define OPTION_VAL_SWITCH_VAL NULL
 #define OPTION_VAL_DEDICATED_VAL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_VAL NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_VAL NULL
 #define SGX_TURBO_DELAY_LABEL_VAL NULL
 #define SGX_TURBO_DELAY_INFO_0_VAL NULL
 #define SGX_CDIMAGECACHE_LABEL_VAL NULL
@@ -28402,35 +27111,6 @@ struct retro_core_option_v2_definition option_defs_val[] = {
       "2 Buttons"
    },
    {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_VAL,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_VAL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_VAL },
-         { "dedicated", OPTION_VAL_DEDICATED_VAL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_VAL,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_VAL,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
       "sgx_turbo_delay",
       SGX_TURBO_DELAY_LABEL_VAL,
       NULL,
@@ -28745,12 +27425,8 @@ struct retro_core_options_v2 options_val = {
 #define SGX_DEFAULT_JOYPAD_TYPE_P4_INFO_0_VN NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_LABEL_VN NULL
 #define SGX_DEFAULT_JOYPAD_TYPE_P5_INFO_0_VN NULL
-#define SGX_TURBO_TOGGLE_LABEL_VN NULL
-#define SGX_TURBO_TOGGLE_INFO_0_VN NULL
 #define OPTION_VAL_SWITCH_VN NULL
 #define OPTION_VAL_DEDICATED_VN NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_LABEL_VN NULL
-#define SGX_TURBO_TOGGLE_HOTKEY_INFO_0_VN NULL
 #define SGX_TURBO_DELAY_LABEL_VN NULL
 #define SGX_TURBO_DELAY_INFO_0_VN NULL
 #define SGX_CDIMAGECACHE_LABEL_VN NULL
@@ -29116,35 +27792,6 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
          { NULL, NULL},
       },
       "2 Buttons"
-   },
-   {
-      "sgx_turbo_toggle",
-      SGX_TURBO_TOGGLE_LABEL_VN,
-      NULL,
-      SGX_TURBO_TOGGLE_INFO_0_VN,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "switch", OPTION_VAL_SWITCH_VN },
-         { "dedicated", OPTION_VAL_DEDICATED_VN },
-         { NULL, NULL },
-      },
-      "disabled"
-   },
-   {
-      "sgx_turbo_toggle_hotkey",
-      SGX_TURBO_TOGGLE_HOTKEY_LABEL_VN,
-      NULL,
-      SGX_TURBO_TOGGLE_HOTKEY_INFO_0_VN,
-      NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled", NULL },
-         { NULL, NULL },
-      },
-      "disabled"
    },
    {
       "sgx_turbo_delay",
